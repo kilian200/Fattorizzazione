@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  </style>
+</head>
+
+<body>
+  <button onclick="mostraFattoriali()">Clicca qui per mostrare i fattoriali</button>
+  <div id="out">
+  </div>
+
+  <script>
+
+    function fattorizzatore(n){
+      let stringaFattori="";
+      let fineciclo=n/2;
+      for(let fattore=1; fattore<=fineciclo;fattore++){
+        if (n%fattore==0){
+          stringaFattori=stringaFattori+ fattore+" ";
+        }
+      }
+      return  stringaFattori;
+    }
+
+    function mostraFattoriali() {  
+      for (let i = 1;i<=100;i++){
+        document.getElementById("out").innerHTML+=+i+": "+fattorizzatore(i)+"</p>";
+      }
+    }
+
+  </script>
+</body>
+</html>
